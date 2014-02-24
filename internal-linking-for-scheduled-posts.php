@@ -34,7 +34,7 @@ Author URI: http://evansolomon.me
 function es_internal_linking_for_scheduled_posts( $query ) {
 	// Make sure this is a requent for internal linking
 	if ( ! isset( $_POST ) || ! isset( $_POST['action'] ) || 'wp-link-ajax' != $_POST['action'] )
-		return false;
+		return;
 
 	// Add scheduled posts to the query if it's not there yet
 	$post_status = (array) $query->query_vars['post_status'];
